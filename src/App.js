@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const App = () => {
+  var Value = 100;
+  var Value2 = 200;
+  const Demo = () => {
+    return <h1 style={{ color: "red" }}>100</h1>;
+  };
+  const DemoArray = () => {
+    const arr_demo = ["C", "C++", "JJava", "React", "C#"];
+    for (let i = 0; i < arr_demo.length; i++) {
+      return <h3>{arr_demo[i]}</h3>;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>{Value}</h1>
+      <h1>{Value2}</h1>
+      <h1>{Value / 10}</h1>
+      <div>{Demo()}</div>
+      <div>{DemoArray()}</div>
     </div>
   );
-}
+};
 
 export default App;
